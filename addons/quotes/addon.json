@@ -1,13 +1,12 @@
 {
-    "name": "Quotes",
-    "description": "makes the forums cooler",
-    "userscripts": [
-        {
-          "url": "userscript.js",
-          "matches": ["https://scratch.mit.edu/discuss/*"]
-        }
-      ],
-    "tags": ["community"],
-    "enabled_by_default": false
-  }
-  
+  "name": "Quotes",
+  "description": "makes the forums cooler",
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/discuss/*"]
+    }
+  ],
+  "tags": ["community"],
+  "enabled_by_default": false
+}
