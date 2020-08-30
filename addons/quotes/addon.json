@@ -3,7 +3,7 @@
     "description": "makes the forums cooler",
     "userscripts": [
         {
-          "url": "userscript.js",
+          "url": "new.js",
           "matches": ["https://scratch.mit.edu/discuss/*"]
         }
       ],
