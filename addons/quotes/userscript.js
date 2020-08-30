@@ -1,28 +1,28 @@
 import textFieldEdit from "../../libraries/text-field-edit.js"; //used for editing the forum text box without messing with the edit history
 
-
 export default async function ({ addon, global, console }) {
-    var x = 0
-    var y = 0
+  var x = 0;
+  var y = 0;
 
-    function debounce(fn, delay) {
-        let timer = null;
-        return function () {
-            var context = this, args = arguments;
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-                fn.apply(context, args);
-            }, delay);
-        };
+  function debounce(fn, delay) {
+    let timer = null;
+    return function () {
+      var context = this,
+        args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        fn.apply(context, args);
+      }, delay);
     };
+  }
 
-    function addQuoteButton(selection, username) {
-        removeQuoteButton()
-
-        var overlay = document.createElement('div')
+  function addQuoteButton(selection, username) {
+    removeQuoteButton();
 
         overlay.className = 'add-quote'
 
+    overlay.style.backgroundColor = "rgba(11,10,7,0.8)";
+    overlay.style.color = "white";
 
         overlay.style.top = y + 10 + 'px'
         overlay.style.left = x + 'px'
@@ -35,16 +35,16 @@ export default async function ({ addon, global, console }) {
             textFieldEdit.insert(document.getElementById('id_body'), `[quote=${username}]${selection}[/quote]\n`)
         })
 
-        document.body.appendChild(overlay)
-    }
+    document.body.appendChild(overlay);
+  }
 
-    function removeQuoteButton() {
-        if (document.getElementById('overlay')) {
-            document.getElementById('overlay').remove()
-        }
+  function removeQuoteButton() {
+    if (document.getElementById("overlay")) {
+      document.getElementById("overlay").remove();
     }
-
-    var contents = document.querySelectorAll('div > div.box-content > div.postright > div > div')
+  }
+  //?
+  var contents = document.querySelectorAll("div > div.box-content > div.postright > div > div");
 
     document.addEventListener("selectionchange", debounce(function (event) {
         removeQuoteButton()
@@ -57,7 +57,7 @@ export default async function ({ addon, global, console }) {
 
             let selection = getSelectionHTML()
 
-            var username = 'a person'
+        var username = "a person";
 
             if (selection == '') {
                 //
@@ -99,7 +99,14 @@ export default async function ({ addon, global, console }) {
             userSelection = document.selection.createRange();
             return userSelection.htmlText;
         } else {
-            return '';
+          if (
+            document.getSelection().focusNode.parentElement.parentElement.parentElement.parentElement.parentElement
+              .children[1]
+          ) {
+            username = document.getSelection().focusNode.parentElement.parentElement.parentElement.parentElement
+              .parentElement.children[1].children[0].children[0].children[0].innerText;
+          }
+          addQuoteButton(selection, username);
         }
     }
 
