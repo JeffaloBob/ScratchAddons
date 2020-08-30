@@ -1,0 +1,13 @@
+.add-quote{
+    position: absolute;
+    display: block;
+    z-index: 300;
+    line-height: 1.4;
+    padding: 5px 5px;
+    border-radius: 5px;
+
+    background-color: rgba(16, 26, 36, 0.753);
+    color: white;
+
+    cursor: pointer;
+}

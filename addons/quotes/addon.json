@@ -7,6 +7,12 @@
           "matches": ["https://scratch.mit.edu/discuss/*"]
         }
       ],
+      "userstyles": [
+        {
+          "url": "style.css",
+          "matches": ["https://scratch.mit.edu/discuss/*"]
+        }
+      ],
     "tags": ["community"],
     "enabled_by_default": false
   }
