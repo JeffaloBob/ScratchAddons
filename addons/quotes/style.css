@@ -1,20 +1,19 @@
-.add-quote{
-    position: absolute;
-    display: block;
-    z-index: 300;
-    line-height: 1.4;
-    padding: 8px 8px;
-    border-radius: 5px;
+.add-quote {
+  position: absolute;
+  display: block;
+  z-index: 300;
+  line-height: 1.4;
+  padding: 8px 8px;
+  border-radius: 5px;
 
-  
-    color: white;
+  color: white;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    background-color: rgba(16, 26, 36, 0.753);
-    transition: 0.3s;
+  background-color: rgba(16, 26, 36, 0.753);
+  transition: 0.3s;
 }
 
-.add-quote:hover{
-    background-color: rgba(16, 26, 36, 0.904);
+.add-quote:hover {
+  background-color: rgba(16, 26, 36, 0.904);
 }
