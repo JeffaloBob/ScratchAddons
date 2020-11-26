@@ -1,18 +1,17 @@
 {
-    "name": "Hide toolbox",
-    "description": "Adds a button which toggles the sidebar visibility.",
-    "credits": [
-      {
-        "name": "Jeffalo"
-      }
-    ],
-    "userscripts": [
-      {
-        "url": "userscript.js",
-        "matches": ["https://scratch.mit.edu/projects/*"]
-      }
-    ],
-    "tags": ["editor"],
-    "l10n": true
-  }
-  
+  "name": "Hide toolbox",
+  "description": "Adds a button which toggles the sidebar visibility.",
+  "credits": [
+    {
+      "name": "Jeffalo"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+  "tags": ["editor"],
+  "l10n": true
+}
