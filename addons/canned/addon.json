@@ -1,0 +1,44 @@
+{
+  "name": "Canned responses",
+  "description": "idk lol.",
+  "credits": [
+    {
+      "name": "Jeffalo"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "discuss.js",
+      "matches": ["https://scratch.mit.edu/discuss/topic/*"],
+      "settingMatch": {
+        "id": "discuss",
+        "value": true
+      }
+    },
+    {
+      "url": "comments.js",
+      "matches": ["https://scratch.mit.edu/users/*/", "https://scratch.mit.edu/studios/*/comments", "https://scratch.mit.edu/projects/*"],
+      "settingMatch": {
+        "id": "comments",
+        "value": true
+      }
+    }
+  ],
+  "settings": [
+    {
+      "name": "Comments",
+      "id": "comments",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "forums",
+      "id": "discuss",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "tags": ["forums", "community"],
+  "enabledByDefault": false,
+  "l10n": true
+}
